@@ -29,7 +29,7 @@ export default {
 		generarToken() {
 			service.generarToken(this.usuario).then(result => {
 				console.log(result);
-				this.$router.push("/");
+				this.$router.push("/").then(()=>window.location.reload());
 			});
 		},
 	},

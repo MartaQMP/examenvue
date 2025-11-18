@@ -34,13 +34,9 @@ export default {
 	},
 	mounted() {
 		this.token = localStorage.getItem("token");
-		if (!this.token) {
-			this.$router.push("/login");
-		} else {
-			service.verCompras(this.token).then(result => {
-				this.compras = result;
-			});
-		}
+		service.verCompras(this.token).then(result => {
+			this.compras = result;
+		});
 	},
 };
 </script>

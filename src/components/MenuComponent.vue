@@ -81,11 +81,8 @@ export default {
 		cerrarSesion() {
 			localStorage.clear();
 			this.token = "";
-			this.$router.push("/login");
+			this.$router.push("/");
 		},
-	},
-	updated() {
-		this.token = localStorage.getItem("token");
 	},
 };
 </script>
